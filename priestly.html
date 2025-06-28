@@ -238,10 +238,21 @@
     <div class="container">
 
       <div class="countdown-container" id="countdown">
-        <div class="countdown-box" id="hours">00<div class="countdown-label">IT</div></div>
-        <div class="countdown-box" id="minutes">00<div class="countdown-label">IS</div></div>
-        <div class="countdown-box" id="seconds">00<div class="countdown-label">TIME!!</div></div>
-      </div>
+  <div class="countdown-box">
+    <span id="hours">00</span>
+    <div class="countdown-label">hours</div>
+  </div>
+  <div class="countdown-separator">:</div>
+  <div class="countdown-box">
+    <span id="minutes">00</span>
+    <div class="countdown-label">min</div>
+  </div>
+  <div class="countdown-separator">:</div>
+  <div class="countdown-box">
+    <span id="seconds">00</span>
+    <div class="countdown-label">sec</div>
+  </div>
+</div>
 
       <br /><br />
 
@@ -422,7 +433,8 @@
     }
 
     function updateCountdown() {
-      const targetDate = new Date('2025-06-14T20:30:00+01:00'); // WAT
+      const targetDate = new Date(2025, 6, 6, 15, 0, 0);
+ 
       const now = new Date();
       const diff = targetDate - now;
 
